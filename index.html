@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <title>Chugga Choo Chee 7</title>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1 class="text-center">Official Train Schedule</h1>
+        <h3 class="text-center">Choo Choo. Chee Chee.</h3>
+    </div>
+    
+    <div class="card">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">name</th>
+                    <td>place</td>
+                    <td>freq</td>
+                    <td>nextArvl</td>
+                    <td>minAway</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="form">
+                <h4>Add Train</h4>
+                <h5>Train Name</h5>
+                <input type = "text" class = "form-control" id="name-input">
+                <h5>Destination</h5>
+                <input type = "text" class = "form-control" id="place-input">
+                <h5>First Train Time (hh:mm)</h5>
+                <input type = "time" class = "form-control" id="time-input">
+                <h5>Frequency (min)</h5>
+                <input type = "number" class = "form-control" id="freq-input">
+            </div>
+             <th scope = 
+            <br>
+            <button class = "submit">Submit</button>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</body>
+
+</html>
