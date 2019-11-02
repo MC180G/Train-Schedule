@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
 
     <!-- Bootstrap CDN-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -15,19 +15,51 @@
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
     <title>Chugga Choo Chee 7</title>
+
+    <style>
+    @import url("https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap");
+
+    #clock {
+        width: 100%;
+        height: 150px;
+        background-color: brown;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: gold;
+        font-family: 'Big Shoulders Text', cursive;
+        font-size: 75px;
+    }
+
+    #welcome {
+        background-color: navy;
+        color: olive;
+        font-family: 'Big Shoulders Text', cursive;
+        font-size: 200px;
+    }
+    </style>
 </head>
 
 <body>
-    <div class="jumbotron">
+    <div id = "clock" class="" >4:20pm</div>
+    <div id='welcome' class="jumbotron">
         <h1 class="text-center">Official Train Schedule</h1>
         <h3 class="text-center">Choo Choo. Chee Chee.</h3>
     </div>
     
             <script>
-                   moment().format('h:mm:ss a');
+                const clock=document.getElementById('clock');
+                setInterval(() => {
+                    const now=moment();
+                    const clockFace=now.format('h:mm:ssa');
+                    clock.textContent=clockFace
+                }, 1000);
+
+                
                 </script>
     <div class="card">
-        <table class="table">
+    <table class="table" id="train-sched">
             <thead>
                 <tr>
                     <th scope="col">Train Name</th>
@@ -38,13 +70,6 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">name</th>
-                    <td>place</td>
-                    <td>freq</td>
-                    <td>nextArvl</td>
-                    <td>minAway</td>
-                </tr>
             </tbody>
         </table>
     </div>
@@ -60,13 +85,15 @@
                 <h5>First Train Time (hh:mm)</h5>
                 <input type = "time" class = "form-control" id="time-input">
                 <h5>Frequency (min)</h5>
-                <input type = "number" class = "form-control" id="freq-input">
+                <input type = "number" format="mm" class = "form-control" id="freq-input">
             </div>
-             <th scope = 
+             
             <br>
-            <button class = "submit">Submit</button>
+            <button id = "submit">Submit</button>
         </div>
     </div>
+
+    <script src="javascript.js"></script>
 
     
 </body>
