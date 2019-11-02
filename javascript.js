@@ -13,39 +13,28 @@ firebase.initializeApp(firebaseConfig);
 
 var database = firebase.database();
 
-var name = "";
-var place = "";
-var time = "";
-var freq = 0;
-
-
 
 $("#submit").on("click", function (event) {
   event.preventDefault();
 
   var name = $("#name-input").val().trim();
   var place = $("#place-input").val().trim();
-  var time = moment($("#time-input").val().trim(), "HH:mm").format("hh:mma");
-  var freq = moment($("#freq-input").val().trim(), "mm").format("mm");
+  var time = $("#time-input").val().trim();
+  var freq = $("#freq-input").val().trim();
 
 
-  var newTrain={
-  name: name,
-  place: place,
-  time: time,
-  freq: freq,
-  };
-
-  database.ref().push(newTrain);
+  database.ref().push({
+    name: name,
+    place: place,
+    time: time,
+    freq: freq,
+    });
 
  
-
   console.log(name);
   console.log(place);
   console.log(time);
   console.log(freq);
-
-  alert("New Train Added!");
 
   $("name-input").val("");
   $("place-input").val("");
@@ -62,15 +51,18 @@ database.ref().on("child_added", function (childSnapshot) {
   var time = childSnapshot.val().time;
   var freq = childSnapshot.val().freq;
 
-  var now = moment();
+  var convTime = moment(time, "HH:mm").subtract(1, 'year');
+  console.log(convTime);
 
-  var trainTime = moment(time).get('hour' , 'minute');
+  var trainTime = moment().diff((convTime), "minutes");
   console.log(trainTime);
 
-  var nextArvl = moment(trainTime).set('hour', 'minute').add(freq, 'minutes');
+  var timeRemain = trainTime % freq;
+  
+  var minAway = freq - timeRemain;
+  
+  var nextArvl = moment().add(minAway, 'minutes');
   console.log(nextArvl);
-
-  var minAway =moment.duration(now.to(nextArvl)).asMinutes();
 
    
 
@@ -78,7 +70,7 @@ database.ref().on("child_added", function (childSnapshot) {
     $("<td>").text(name),
     $("<td>").text(place),
     $("<td>").text(freq),
-    $("<td>").text(nextArvl),
+    $("<td>").text(nextArvl.format("hh:mm")),
     $("<td>").text(minAway)
   );
 

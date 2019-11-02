@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <link rel="stylesheet" href="style.css">
 
     <!-- Bootstrap CDN-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -17,27 +18,7 @@
     <title>Chugga Choo Chee 7</title>
 
     <style>
-    @import url("https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap");
-
-    #clock {
-        width: 100%;
-        height: 150px;
-        background-color: brown;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: gold;
-        font-family: 'Big Shoulders Text', cursive;
-        font-size: 75px;
-    }
-
-    #welcome {
-        background-color: navy;
-        color: olive;
-        font-family: 'Big Shoulders Text', cursive;
-        font-size: 200px;
-    }
+   
     </style>
 </head>
 
@@ -75,15 +56,15 @@
     </div>
 
     <div class="card">
-        <div class="card-body">
+        <div class="card-body" id="user-interface">
             <div class="form">
                 <h4>Add Train</h4>
                 <h5>Train Name</h5>
                 <input type = "text" class = "form-control" id="name-input">
                 <h5>Destination</h5>
                 <input type = "text" class = "form-control" id="place-input">
-                <h5>First Train Time (hh:mm)</h5>
-                <input type = "time" class = "form-control" id="time-input">
+                <h5>First Train Time (Military-HH:mm)</h5>
+                <input type = "text" class = "form-control" id="time-input">
                 <h5>Frequency (min)</h5>
                 <input type = "number" format="mm" class = "form-control" id="freq-input">
             </div>
