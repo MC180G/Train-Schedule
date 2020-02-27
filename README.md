@@ -7,13 +7,13 @@ I've created a train schedule application that incorporates Firebase to host arr
 
 * When adding trains, users are able to submit the following:
     
-    * Train Name - *inert*
+    * Train Name - *inert data*
     
-    * Destination - *inert*
+    * Destination - *inert data*
     
-    * First Train Time -- in military time
-    
-    * Frequency -- in minutes
+    * First Train Time -- in military time - *active data*
+
+    * Frequency -- in minutes - *active data*
     
 Built With
 FireBase - BackEnd 
