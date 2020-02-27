@@ -5,7 +5,7 @@
 https://mc180g.github.io/Train-Schedule/
 
 
-I've created a train schedule application that incorporates Firebase to host arrival and departure data. This app retrieves and manipulates this information with Moment.js. This website provides up-to-date information about various trains, namely their arrival times and how many minutes remain until they arrive at their station. This could eaily be manipulated for use in situations involving public transportation, ice cream trucks, or even tracking a stars position in the sky.
+I've created a train schedule application that incorporates Firebase to host arrival and departure data. This app retrieves and manipulates this information with Moment.js. This website provides up-to-date information about various trains, namely their arrival times and how many minutes remain until they arrive at the station. This could eaily be manipulated for use in situations involving public transportation, ice cream trucks, or even tracking a stars position in the sky.
 
 * When adding trains, users are able to submit the following:
     
