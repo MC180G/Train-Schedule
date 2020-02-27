@@ -1,5 +1,5 @@
 # Train_Scheduler
-
+@Matt Colson
 https://mc180g.github.io/Train-Schedule/
 
 
@@ -17,9 +17,6 @@ I've created a train schedule application that incorporates Firebase to host arr
     
 Built With
 FireBase - BackEnd 
-
-Author - 
-Matt Colson
 
 **Special Thanks** to Jamie DeLong who gave me 
 the added wisdom I needed.
