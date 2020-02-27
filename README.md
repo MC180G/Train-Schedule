@@ -18,9 +18,8 @@ I've created a train schedule application that incorporates Firebase to host arr
 Built With
 FireBase - BackEnd 
 
-Authors
+Author
 Matt Colson
-Devvo Matto
 
-Special Thanks to Jamie DeLong who gave me 
+**Special Thanks** to Jamie DeLong who gave me 
 the added wisdom I needed.
