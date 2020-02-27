@@ -1,10 +1,26 @@
-# Train-Schedule
-What the project does
+# Train_Scheduler
 
-Why the project is useful
-How users can get started with the project
-Where users can get help with your project
-Who maintains and contributes to the project
-If you put your README file in your repository's root, docs, or hidden .github directory,
-GitHub will recognize and automatically surface your README to repository visitors.
+https://mc180g.github.io/Train-Schedule/
 
+
+I've created a train schedule application that incorporates Firebase to host arrival and departure data. This app retrieves and manipulates this information with Moment.js. This website provides up-to-date information about various trains, namely their arrival times and how many minutes remain until they arrive at their station. This could eaily be manipulated for use in situations involving public transportation, ice cream trucks, or even tracking a stars position in the sky.
+
+* When adding trains, users are able to submit the following:
+    
+    * Train Name
+    
+    * Destination 
+    
+    * First Train Time -- in military time
+    
+    * Frequency -- in minutes
+    
+Built With
+FireBase - BackEnd 
+
+Authors
+Matt Colson
+Devvo Matto
+
+Special Thanks to Jamie DeLong who gave me 
+the added wisdom I needed.
