@@ -18,7 +18,9 @@ I've created a train schedule application that incorporates Firebase to host arr
     * Frequency -- in minutes - *active data*
     
 Built With: 
+
 MomentJS - FrontEnd
+
 FireBase - BackEnd 
 
 **Special Thanks** to Jamie DeLong who gave me 
