@@ -1,6 +1,5 @@
 # Train Scheduler
-
-@Matt Colson
+**Author** Matt Colson
 
 https://mc180g.github.io/Train-Schedule/
 
